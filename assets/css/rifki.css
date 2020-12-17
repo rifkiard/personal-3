@@ -10933,6 +10933,40 @@ body {
   fill: #575fcf;
 }
 
+.preload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+}
+.preload .loader {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+.preload .loader svg {
+  height: 50px;
+}
+.preload .loader svg path,
+.preload .loader svg rect {
+  fill: #575fcf;
+}
+.preload .loader p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #575fcf;
+}
+
 @media (max-width: 991.98px) {
   .navbar {
     position: fixed;
