@@ -1,0 +1,40 @@
+@include media-breakpoint-down(sm) {
+  .jumbotron.home-jumbotron {
+    .home-jumbotron-caption {
+      width: 0;
+      .home-jumbotron-caption-inner {
+        color: $white;
+        padding: 0 2.5%;
+        h1 {
+          font-size: 52px;
+        }
+      }
+    }
+    .home-jumbotron-image {
+      width: 100%;
+    }
+  }
+
+  .portfolio-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .portfolio-item {
+      width: 100%;
+      overflow: hidden;
+      margin: 10px 0;
+      position: relative;
+    }
+  }
+
+  .contact-wrapper {
+    .contact-item {
+      width: 100%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@include media-breakpoint-down(md) {
+  .navbar {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+    background-color: rgba($white, 0);
+
+    .navbar-inner {
+      .navbar-close {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        z-index: 2005 !important;
+
+        &.active {
+          display: block;
+          background-color: rgba($black, 0.5);
+        }
+      }
+
+      .navbar-logo {
+        color: $white !important;
+      }
+
+      .navbar-menu-outer {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -300px;
+        height: 100vh;
+        width: 250px;
+        background-color: $white;
+        transition: 0.3s;
+        z-index: 2006 !important;
+
+        &.active {
+          left: 0;
+        }
+        .navbar-menu-logo {
+          display: block;
+          width: 100%;
+          padding: 20px 0;
+          text-align: center;
+          border-bottom: solid 2px $gray-300;
+          font-size: 30px;
+          line-height: 30px;
+          font-weight: bolder;
+          color: $primary !important;
+        }
+
+        .navbar-menu {
+          display: block;
+          width: 100%;
+
+          li.navbar-menu-list {
+            display: block;
+            width: 100%;
+
+            a {
+              display: block;
+              width: 100%;
+              padding: 10px 20px;
+              font-size: 16px;
+              color: $black !important;
+
+              &::before,
+              &::after {
+                display: none;
+              }
+
+              &:hover,
+              &.active {
+                background-color: rgba($primary, 0.1);
+              }
+            }
+          }
+        }
+      }
+
+      .navbar-toggle {
+        display: block;
+      }
+    }
+  }
+
+  .portfolio-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .portfolio-item {
+      width: calc((100% / 2) - 20px);
+      overflow: hidden;
+      margin: 10px;
+      position: relative;
+    }
+  }
+}
