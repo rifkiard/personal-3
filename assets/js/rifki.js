@@ -129,4 +129,5 @@ $(window).on("load", function () {
   });
 
   $(".preload").fadeOut();
+  $('body').removeClass('overflow-hidden');
 });
